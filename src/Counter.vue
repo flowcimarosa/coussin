@@ -1,5 +1,5 @@
 <template>
-    <div class="counter impair">
+    <div class="counter" :class="{pair : count%2 === 0}">
         <h1>Combien d'oreillers dans votre vie ?</h1>
         <div class="coussin">
             <img src="./assets/1.png" v-show="count == 1">
@@ -35,9 +35,13 @@ export default {
     methods: {
         increment () {
             NotificationsStore.increment()
+            
         },
         decrement () {
             NotificationsStore.decrement()
+        },
+        impair () {
+
         }
     }
 }
@@ -67,7 +71,7 @@ export default {
         color: #d35400;
         font-family: sans-serif;
         margin-left: 5%;
-        margin-bottom: 15%;
+        margin-bottom: 30%;
     }
 
     /*** Images coussins - Block ***/
@@ -83,16 +87,21 @@ export default {
     /*** Compteur boutton - Block ***/
 
     .btn_counter{
+        margin-left: 26%;
         padding: 5%;
         display: flex;
     }
 
-    button, p{
-        flex: 1 2 auto;
-    }
-
     button{
-        border-radius: 50%;
+        margin-top: 8%;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border: 1px solid #d35400;
+        color: #d35400;
+        font-size: 1.5em;
+        padding: 0 5px;
+        background-color: #fff;
     }
 
     p{
@@ -100,5 +109,7 @@ export default {
         font-weight: bold;
         font-size: 1.5em;
         text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
     }
 </style>
