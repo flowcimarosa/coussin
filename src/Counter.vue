@@ -112,4 +112,28 @@ export default {
         margin-left: 5%;
         margin-right: 5%;
     }
+
+    /*** Media queries ***/
+    @media screen and (min-width: 751px){
+        h1{
+            margin-bottom: 10%;
+        }
+
+        .coussin{
+            margin-bottom: 2%;
+        }
+        
+        img{
+            width: 30%;
+        }
+
+        button{
+            margin-top: 1.5%;
+        }
+
+        p{
+            margin-left: 2%;
+            margin-right: 2%;
+        }
+    }
 </style>
